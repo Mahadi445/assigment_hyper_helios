@@ -1,0 +1,17 @@
+{% extends 'curd/user_information.html' %}
+{% block title %} Delete List View {% endblock title %} 
+
+{% block content %}
+
+    <form method="post">
+    <h1>Delete Phone Information</h1>
+    <p>Are you sure you want to delete the following phone record?</p>
+    <p>Name: {{ phone.name }}</p>
+    <p>Phone Number: {{ phone.phone_number }}</p>
+        {% csrf_token %}
+        <button class="delete-link" type="submit"> Delete</button>
+        <a class="cancel-link" href="{% url 'contact_list' %}">Cancel</a>
+    </form>
+    
+
+{% endblock content %}
