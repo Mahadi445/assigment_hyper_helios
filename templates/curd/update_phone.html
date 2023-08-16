@@ -2,6 +2,7 @@
 {% block title %} Update List View {% endblock title %} 
 
 {% block content %}
+
 <form method="post">
     <h1>Update Phone Information</h1>
     {% csrf_token %}
@@ -9,6 +10,5 @@
     <button type="submit">Update</button>
     <a class="cancel-link" href="{% url 'contact_list' %}">Back </a>
 </form>
-
 
 {% endblock content %}

@@ -1,8 +1,11 @@
-
 from django.shortcuts import redirect, render, get_object_or_404
 from curd.forms import UserInfoForm
 from curd.models import user_info
+
 # Create your views here.
+
+
+
 def user_information(request):
     if request.method == 'POST':
         form = UserInfoForm(request.POST)
@@ -17,7 +20,7 @@ def user_information(request):
 
 
 def contact_list_view(request):
-    phn_list = user_info.objects.all()
+    phn_list = user_info.objects.all() #fetch all data in database
     context = {
         'phn_list': phn_list
     }
